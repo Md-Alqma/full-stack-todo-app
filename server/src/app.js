@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-import apiRoute from "./utils/api.js";
+import apiRoute from "./routes/api.js";
 import { DB_CONNECT } from "./utils/constants.js";
 
 const app = express();
