@@ -5,6 +5,7 @@ import { RegisterSchema } from "../validationSchema/RegisterSchema.js";
 import Login from "../controllers/Login.controller.js";
 import { createTodo } from "../controllers/Todo.controller.js";
 import { check } from "express-validator";
+import { GetTodos } from "../controllers/TodoList.controller.js";
 const apiRoute = express.Router();
 export const apiProtected = express.Router();
 
@@ -18,4 +19,6 @@ apiProtected.post(
   [check("desc", "Todo desc is required").exists()],
   createTodo
 );
+
+apiProtected.get('/todolist',GetTodos)
 export default apiRoute;
