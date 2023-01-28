@@ -1,7 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const u = localStorage.getItem("user");
+    setUser(u);
+  },[]);
+  const handleLogout = () => {
+    localStorage.clear();
+    navigate("/login");
+  };
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -36,11 +48,13 @@ const Header = () => {
                 Register
               </Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Logout
-              </a>
-            </li>
+            {user && (
+              <li className="nav-item">
+                <a className="nav-link" href="#" onClick={handleLogout}>
+                  Logout
+                </a>
+              </li>
+            )}
           </ul>
           <form className="d-flex">
             <input
