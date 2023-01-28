@@ -12,6 +12,7 @@ const Login = ({ user, setUser }) => {
   });
 
   useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
     if (user) {
       navigate("/");
     }
