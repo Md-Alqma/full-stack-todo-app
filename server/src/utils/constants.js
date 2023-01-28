@@ -1,4 +1,4 @@
-export const DB_CONNECT = `mongodb+srv://alqma:AlqmaAnsari@cluster0.iutp4ht.mongodb.net/todo?retryWrites=true&w=majority`;
+export const DB_CONNECT = `mongodb://localhost:27017/todoapp`;
 
 export const JWT_TOKEN_SECRET = "asdfkjsdgfjlds";
 
