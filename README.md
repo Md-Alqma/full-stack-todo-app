@@ -12,7 +12,7 @@ Welcome to the MERN Todo Web Application! This application allows you to manage 
 
 ## Installation
 
-1. Clone the repository: `git clone <repository-url>`
+1. Clone the repository: `git clone https://github.com/Md-Alqma/full-stack-todo-app.git`
 2. Navigate to the project directory: `cd mern-todo-app`
 3. Install server dependencies: `npm install`
 4. Navigate to the client directory: `cd client`
